@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function FunctionBased(props) {
 
   console.log(props.name);
 
+  useEffect(() => { 
+    setTimeout(() => {
+       setcount((count)=>(count+1.5))
+    }, 1000);
+  })
 
+  const [count, setcount] = useState(0)
   const [list, setList] = useState([{
     name: "aarju",
     email: "aarju@gmail.com",
@@ -24,20 +30,20 @@ function FunctionBased(props) {
 
   function ChangeData() {
     console.log(list);
-      setList([{
+    setList([{
       name: "jyoti",
       email: "jyoti@gmail.com",
       id: 3,
     },
     ])
-}
- 
-  
+  }
+
+
 
   return (
     <div>
-      <h5 className="">Function Based</h5>
-
+      <h5 className="">Function Based {count}  </h5>
+      
       {list.map((value, index) => (
         <div key={index}>
           <p>Name: {value.name}</p>
