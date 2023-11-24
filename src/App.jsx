@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import '../public/css/style.css'
-import ClassBase from './components/class-base'
+import AddForm from './components/function-base/addform'
+import List from './components/function-base/list'
 import FunctionBased from './components/function-base/function-base'
+import ClassBase from './components/class-base'
 
 
 function App() {
@@ -10,8 +12,10 @@ function App() {
 
   return (
     <>
+    <AddForm />
+    <List />
     {/* <ClassBase /> */}
-    <FunctionBased name={"aarju dhiman"}/>
+    {/* <FunctionBased name={"aarju dhiman"}/> */}
     </>
   )
 }
