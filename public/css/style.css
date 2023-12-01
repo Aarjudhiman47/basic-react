@@ -23,9 +23,11 @@ button:hover {
 }
 label{
     display: block;
+    font-size: 18px;
+    margin: 3px;
 }
 .ResultDiv{
-    width:50%;
+    width:70%;
     margin: auto;
     margin-top: 5px;
     padding: 10px;
@@ -41,4 +43,7 @@ td {
   border: 1px solid black;
   margin: 0px 0px;
   padding: 5px 5px;
+}
+p{
+    color: red;
 }
